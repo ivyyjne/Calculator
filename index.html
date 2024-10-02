@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+
+	<style>
+		body{
+			margin: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+
+		
+		#Calculator{
+			font-family: arial;
+			background-color: black;
+			border-radius: 15px;
+			max-width: I'll300px;
+
+
+		}
+		#display{
+			width: 250px;
+			padding: 20px;
+			font-size: 2rem;
+ 		text-align: left;
+			border-radius: 15px;
+			border:none;
+			background-color: darkgray;
+			color: black;
+		}
+		#number{
+			display: flex;
+			gap: 10px;
+			padding: 15px;
+		}                                         
+		button{
+			width: 50px;
+			height: 50px;
+			border-radius: 50px;
+			border:none;
+			background-color: white;
+			color: black;
+			font-size: 2rem;
+			font-weight: normal;
+			cursor: pointer;
+
+		}
+		button:hover{
+			background-color: orange;
+		}
+		button:active{
+			background-color: whitesmoke;
+		}
+		.operator-btn{
+			background-color: white;
+		}
+		.operator-btn:hover{
+			background-color: orange;
+		}
+		.operator-btn:active{
+			background-color: whitesmoke;
+		}
+
+
+		
+		
+	</style>
+</head>
+<body >
+	<div id="Calculator">
+		<input id ="display">
+		
+		<div id="number">
+   <button onclick="display.value =''"  class="operator-btn">C</button>
+	<button onclick="display.value +='%'" class="operator-btn">%</button>
+	<button onclick="display.value = display.value.toString().slice(0,-1)" class="operator-btn">x</button>
+	<button onclick="display.value +='/'"  class="operator-btn">/</button>
+
+	</div>
+	<div id="number">
+	<button onclick="display.value +='7'">7</button>
+	<button onclick="display.value +='8'">8</button>
+	<button onclick="display.value +='9'">9</button>
+	<button onclick="display.value +='+'"class="operator-btn">+</button>
+
+
+    </div>
+
+    <div id="number">
+    <button onclick="display.value +='4'">4</button>
+	<button onclick="display.value +='5'">5</button>
+	<button onclick="display.value +='6'">6</button>
+	<button onclick="display.value +='-'"  class="operator-btn">-</button>
+
+	
+    </div>
+
+    <div id="number">
+    <button onclick="display.value +='1'">1</button>
+	<button onclick="display.value +='2'">2</button>
+	<button onclick="display.value +='3'">3</button>
+	<button onclick="display.value +='*'" class="operator-btn">*</button>
+
+	</div>
+
+	<div id="number">
+    <button onclick="display.value +='00'">00</button>
+	<button onclick="display.value +='0'">0</button>
+	<button onclick="display.value +='0'">.</button>
+	<button onclick="display.value = eval(display.value)"  class="operator-btn">=</button>
+
+	</div>
+ 
+
+
+</body>
+</html>
